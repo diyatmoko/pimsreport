@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PIMS REPORTS</string>
+    <string name="title">WELCOME TO PIMS REPORTS</string>
+    <string name="login">Masuk</string>
+    <string name="sync">Sinkronisasi Data</string>
+    <string name="company">FIRST RESOURCES, LTD</string>
+    <string name="company_web">firstresources.com</string>
+
+    <string name="str_profile">Profil Anda</string>
+    <string name="str_others">Lainnya</string>
+    <string name="logout">Keluar</string>
+
+    <string name="str_rpt_fa">Laporan FA Harian</string>
+    <string name="str_rpt_fa_desc">Generate Report FA Harian</string>
+
+    <string name="open_nav">NavBar</string>
+    <string name="close_nav">NavBar</string>
+
+    <string name="company_title">Perusahaan</string>
+    <string name="location_title">Lokasi</string>
+    <string name="afdeling_title">Afdeling</string>
+
+    <string name="gen_LHA">Show Laporan</string>
+</resources>
