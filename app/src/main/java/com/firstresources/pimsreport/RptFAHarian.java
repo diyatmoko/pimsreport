@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa;
+package com.firstresources.pimsreport;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.firstresources.pimsfa.contract.FAHarianContract;
-import com.firstresources.pimsfa.helper.DBHelper;
-import com.firstresources.pimsfa.model.ReportFAHarian;
+import com.firstresources.pimsreport.contract.FAHarianContract;
+import com.firstresources.pimsreport.helper.DBHelper;
+import com.firstresources.pimsreport.model.ReportFAHarian;
 
 import java.util.ArrayList;
 import java.util.List;

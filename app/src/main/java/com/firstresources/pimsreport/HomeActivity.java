@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa;
+package com.firstresources.pimsreport;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.firstresources.pimsfa.contract.FAHarianContract;
+import com.firstresources.pimsreport.contract.FAHarianContract;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity implements FAHarianContract.
         setSupportActionBar(toolbar);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.open_nav, R.string.close_nav);
+                this, drawer, toolbar, R.string.str_open_nav, R.string.str_close_nav);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);

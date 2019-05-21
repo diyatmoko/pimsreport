@@ -1,24 +1,28 @@
 <resources>
     <string name="app_name">PIMS REPORTS</string>
-    <string name="title">WELCOME TO PIMS REPORTS</string>
-    <string name="login">Masuk</string>
-    <string name="sync">Sinkronisasi Data</string>
-    <string name="company">FIRST RESOURCES, LTD</string>
-    <string name="company_web">firstresources.com</string>
+    <string name="str_title">WELCOME TO PIMS REPORTS</string>
+    <string name="str_sync">Sinkronisasi Data</string>
+    <string name="str_company">FIRST RESOURCES, LTD</string>
+    <string name="str_company_web">firstresources.com</string>
 
     <string name="str_profile">Profil Anda</string>
     <string name="str_others">Lainnya</string>
-    <string name="logout">Keluar</string>
+    <string name="str_logout">Keluar</string>
+    <string name="str_login">Masuk</string>
+    <string name="str_forgot_pwd">Lupa Password?</string>
+
 
     <string name="str_rpt_fa">Laporan FA Harian</string>
     <string name="str_rpt_fa_desc">Generate Report FA Harian</string>
 
-    <string name="open_nav">NavBar</string>
-    <string name="close_nav">NavBar</string>
+    <string name="str_open_nav">NavBar</string>
+    <string name="str_close_nav">NavBar</string>
 
-    <string name="company_title">Perusahaan</string>
-    <string name="location_title">Lokasi</string>
-    <string name="afdeling_title">Afdeling</string>
+    <string name="str_company_title">Perusahaan</string>
+    <string name="str_location_title">Lokasi</string>
+    <string name="str_afdeling_title">Afdeling</string>
 
     <string name="gen_LHA">Show Laporan</string>
+    <string name="str_userid">UserID</string>
+    <string name="str_password">Password</string>
 </resources>

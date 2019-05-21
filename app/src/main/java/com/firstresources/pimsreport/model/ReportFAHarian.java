@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa.model;
+package com.firstresources.pimsreport.model;
 
 /**
  * @author Yanuar Diyatmoko

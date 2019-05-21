@@ -6,6 +6,6 @@
     android:theme="@style/AppTheme">
     <item
         android:id="@+id/logout"
-        android:title="@string/logout"
+        android:title="@string/str_logout"
         app:showAsAction="never"/>
 </menu>

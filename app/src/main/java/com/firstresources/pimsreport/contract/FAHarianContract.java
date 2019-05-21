@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa.contract;
+package com.firstresources.pimsreport.contract;
 
 /**
  * @author Yanuar Diyatmoko

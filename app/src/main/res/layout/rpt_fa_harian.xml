@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/location_title"
+                android:text="@string/str_location_title"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"/>
@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/afdeling_title"
+                android:text="@string/str_afdeling_title"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"/>

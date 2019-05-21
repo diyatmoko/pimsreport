@@ -10,15 +10,15 @@
  *
  */
 
-package com.firstresources.pimsfa.rest;
+package com.firstresources.pimsreport.rest;
 
-import com.firstresources.pimsfa.model.ReportFAHarian;
+import com.firstresources.pimsreport.model.ReportFAHarian;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
+
 /**
  * @author Yanuar Diyatmoko
  * @version 1.0.0

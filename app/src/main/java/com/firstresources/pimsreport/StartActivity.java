@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa;
+package com.firstresources.pimsreport;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,12 +10,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firstresources.pimsfa.contract.FAHarianContract;
-import com.firstresources.pimsfa.contract.Utils;
-import com.firstresources.pimsfa.helper.Constants;
-import com.firstresources.pimsfa.helper.DBHelper;
-import com.firstresources.pimsfa.model.ReportFAHarian;
-import com.firstresources.pimsfa.rest.ApiClient;
+import com.firstresources.pimsreport.contract.FAHarianContract;
+import com.firstresources.pimsreport.helper.Utils;
+import com.firstresources.pimsreport.helper.DBHelper;
+import com.firstresources.pimsreport.model.ReportFAHarian;
+import com.firstresources.pimsreport.rest.ApiClient;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -45,9 +44,9 @@ public class StartActivity extends AppCompatActivity implements FAHarianContract
     //initialize component
     @BindView(R.id.btnSignin)
     Button btnSignin;
-    @BindView(R.id.btnSync) Button btnSync;
-    @BindView(R.id.txtSync)
-    TextView txtSync;
+//    @BindView(R.id.btnSync) Button btnSync;
+//    @BindView(R.id.txtSync)
+//    TextView txtSync;
 
     @Override
     public void initViews() {
@@ -64,14 +63,14 @@ public class StartActivity extends AppCompatActivity implements FAHarianContract
                 finish();
             }
         });
-        btnSync.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                dbHelper.deleteAllTable();
-                onClickSynchronize();
-            }
-        });
+//        btnSync.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                dbHelper.deleteAllTable();
+//                onClickSynchronize();
+//            }
+//        });
     }
 
     @Override
@@ -84,7 +83,7 @@ public class StartActivity extends AppCompatActivity implements FAHarianContract
     public void onClickSynchronize(){
         progressDialog = new ProgressDialog(StartActivity.this);
         progressDialog.setMessage("Synchronizing...");
-        progressDialog.setTitle(R.string.sync);
+        progressDialog.setTitle(R.string.str_sync);
         progressDialog.setIndeterminate(false);
         progressDialog.setCancelable(false);
         progressDialog.show();
@@ -110,7 +109,7 @@ public class StartActivity extends AppCompatActivity implements FAHarianContract
                         ReportFAHarian reportFAHarian = listFAHarian.get(i);
                         dbHelper.addReportFAHarian(reportFAHarian);
                     }
-                    txtSync.setText("Terakhir di sinkronisasi pada : " + date);
+//                    txtSync.setText("Terakhir di sinkronisasi pada : " + date);
                 }
                 progressDialog.dismiss();
             }

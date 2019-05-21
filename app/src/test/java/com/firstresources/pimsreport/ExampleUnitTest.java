@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa;
+package com.firstresources.pimsreport;
 
 import org.junit.Test;
 

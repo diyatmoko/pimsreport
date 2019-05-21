@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa;
+package com.firstresources.pimsreport;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.firstresources.pimsfa", appContext.getPackageName());
+        assertEquals("com.firstresources.pimsreport", appContext.getPackageName());
     }
 }

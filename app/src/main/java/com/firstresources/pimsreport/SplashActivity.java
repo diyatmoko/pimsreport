@@ -1,4 +1,4 @@
-package com.firstresources.pimsfa;
+package com.firstresources.pimsreport;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
  * @date 13/05/2019
  */
 public class SplashActivity extends AppCompatActivity {
-    private int loading=1000;
+    private int loading=2000;
 
     //2000 = 2 detik
 
@@ -24,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent =new Intent(getBaseContext(), StartActivity.class);
+                Intent intent =new Intent(getBaseContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
 

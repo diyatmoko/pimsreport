@@ -10,10 +10,10 @@
  *
  */
 
-package com.firstresources.pimsfa.rest;
+package com.firstresources.pimsreport.rest;
 
 
-import com.firstresources.pimsfa.helper.Constants;
+import com.firstresources.pimsreport.helper.Constants;
 
 import java.util.concurrent.TimeUnit;
 

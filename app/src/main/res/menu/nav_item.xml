@@ -8,12 +8,12 @@
             android:title="@string/str_profile"/>
         <item android:id="@+id/synchronize"
             android:icon="@drawable/ic_cloud_download_black"
-            android:title="@string/sync"/>
+            android:title="@string/str_sync"/>
     </group>
 
     <group android:title="@string/str_others">
         <item android:id="@+id/logout"
             android:icon="@drawable/ic_reply_black"
-            android:title="@string/logout"/>
+            android:title="@string/str_logout"/>
     </group>
 </menu>

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.firstresources.pimsfa"
+        applicationId "com.firstresources.pimsreport"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -19,6 +19,7 @@ android {
     repositories {
         maven { url 'https://jitpack.io' }
     }
+
 }
 
 dependencies {
@@ -46,4 +47,7 @@ dependencies {
 
     //mpandroid chart
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //loading
+    implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
 }
