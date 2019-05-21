@@ -9,6 +9,8 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:background="@color/white"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".LoginActivity">
     <ScrollView
         android:layout_width="match_parent"
