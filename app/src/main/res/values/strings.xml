@@ -25,4 +25,7 @@
     <string name="gen_LHA">Show Laporan</string>
     <string name="str_userid">UserID</string>
     <string name="str_password">Password</string>
+
+    <string name="str_rpt_produksi_harian">Monitoring Produksi Harian</string>
+    <string name="str_rpt_other">Lainnya</string>
 </resources>

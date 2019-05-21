@@ -6,9 +6,6 @@
         <item android:id="@+id/account"
             android:icon="@drawable/ic_account"
             android:title="@string/str_profile"/>
-        <item android:id="@+id/synchronize"
-            android:icon="@drawable/ic_cloud_download_black"
-            android:title="@string/str_sync"/>
     </group>
 
     <group android:title="@string/str_others">

@@ -1,5 +1,7 @@
 package com.firstresources.pimsreport.helper;
 
+import android.database.Cursor;
+
 /**
  * @author Yanuar Diyatmoko
  * @version 1.0.0
@@ -30,6 +32,13 @@ public class Constants {
         //    Global Declaration
         public static final String CreatedBy = "CreatedBy";
         public static final String CreatedDate = "CreatedDate";
+
+        //    Table User
+        public static final String T_Master_Users = "T_Master_Users";
+        public static final String Key_ID = "Key_ID";
+        public static final String UserID = "UserID";
+        public static final String Password = "Password";
+        public static final String Name = "Name";
 
         //    Table FA Harian
         public static final String Rpt_FA_Harian = "Rpt_FA_Harian";
@@ -100,8 +109,14 @@ public class Constants {
                 + _25 + " DECIMAL (18,2), " + _26 + " DECIMAL (18,2), " + _27 + " DECIMAL (18,2), " + _28 + " DECIMAL (18,2), "
                 + _29 + " DECIMAL (18,2), " + _30 + " DECIMAL (18,2), " + _31 + " DECIMAL (18,2), "
                 + CreatedBy + " TEXT, " + CreatedDate + " DATETIME)";
-    }
 
+
+        public static final String CREATE_TABLE_USERS = "CREATE TABLE IF NOT EXISTS " + T_Master_Users + " ( "
+                + Key_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + UserID
+                + " TEXT, " + Name + " TEXT"
+                + " TEXT, " + Password + " TEXT)";
+
+    }
 
 
 }

@@ -2,9 +2,7 @@ package com.firstresources.pimsreport;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,8 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
+
 
 import com.firstresources.pimsreport.contract.FAHarianContract;
 
@@ -27,15 +25,26 @@ import butterknife.ButterKnife;
  */
 public class HomeActivity extends AppCompatActivity implements FAHarianContract.View, NavigationView.OnNavigationItemSelectedListener {
 
-    @BindView(R.id.btnRptFAHarian)
-    Button btnRptFAHarian;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.fab)
-    FloatingActionButton fab;
     @BindView(R.id.nav_draw_attend)
     DrawerLayout drawer;
-    @BindView(R.id.nav_view) NavigationView navigationView;
+    @BindView(R.id.nav_view)
+    NavigationView navigationView;
+    @BindView(R.id.btnRptPH)
+    LinearLayout btnRptPH;
+    @BindView(R.id.btnRptPH1)
+    LinearLayout btnRptPH1;
+    @BindView(R.id.btnRptPH2)
+    LinearLayout btnRptPH2;
+    @BindView(R.id.btnRptPH3)
+    LinearLayout btnRptPH3;
+    @BindView(R.id.btnRptPH4)
+    LinearLayout btnRptPH4;
+    @BindView(R.id.btnRptPH5)
+    LinearLayout btnRptPH5;
+
+
 
 //    private SharedPrefManager sharedPrefManager;
 
@@ -51,26 +60,6 @@ public class HomeActivity extends AppCompatActivity implements FAHarianContract.
         navigationView.setNavigationItemSelectedListener(this);
 
 //        sharedPrefManager = new SharedPrefManager(this);
-
-        btnRptFAHarian.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-
-//                sharedPrefManager.saveSPBoolean(Constants.PREFERENCES.EMPLOYEEFINGER, true);
-                Intent intentNewFinger = new Intent(getBaseContext(), RptFAHarian.class);
-                startActivity(intentNewFinger);
-                finish();
-            }
-        });
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
     }
 
@@ -107,7 +96,7 @@ public class HomeActivity extends AppCompatActivity implements FAHarianContract.
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
-            startActivity(new Intent(this, StartActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
             return true;
         }
 
@@ -121,7 +110,7 @@ public class HomeActivity extends AppCompatActivity implements FAHarianContract.
         int id = item.getItemId();
 
         if (id == R.id.logout) {
-            startActivity(new Intent(this, StartActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
             return true;
         }
         drawer.closeDrawer(GravityCompat.START);

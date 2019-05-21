@@ -29,12 +29,16 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         dbase = db;
         db.execSQL(Constants.DATABASE.CREATE_TABLE_RPT_FA_HARIAN);
+        db.execSQL(Constants.DATABASE.CREATE_TABLE_USERS);
+        createUsers(db);
+
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
         db.execSQL("DROP TABLE " + Constants.DATABASE.Rpt_FA_Harian);
+        db.execSQL("DROP TABLE " + Constants.DATABASE.T_Master_Users);
 
         onCreate(db);
     }
@@ -42,6 +46,52 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(Constants.DATABASE.Rpt_FA_Harian,null,null);
     }
+
+    private void createUsers(SQLiteDatabase db){
+        Boolean dataExist = false;
+
+        Cursor c = db.query(true, Constants.DATABASE.T_Master_Users, null, null, null, null, null, null, null);
+        if (c.moveToFirst()) {
+            String userid = c.getString(0);
+            if (userid.trim().equals("")) {
+                dataExist = true;
+            }
+            c.close();
+        }
+        if (!dataExist) {
+            String sql;
+            sql = "insert into " + Constants.DATABASE.T_Master_Users + " (" + Constants.DATABASE.UserID + ","
+                    + Constants.DATABASE.Password + "," + Constants.DATABASE.Name + ") " +
+                    "values ('admin','12345','Yanuar Diyatmoko')";
+
+            db.execSQL(sql);
+        }
+    }
+
+
+    public String validateLogin(String userid, String password){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String whereClause = "UserID = ? AND Password = ?";
+        String [] whereArgs = new String[]{userid, password};
+
+        String[] column  = {Constants.DATABASE.UserID};
+
+        Cursor cursor = db.query(true, Constants.DATABASE.T_Master_Users, column, whereClause, whereArgs,
+                        null, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            userid = cursor.getString(0);
+        } else {
+            userid = "0";
+        }
+
+        cursor.close();
+        db.close();
+
+        return userid;
+    }
+
     public void addReportFAHarian(ReportFAHarian reportFAHarian){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -110,7 +160,8 @@ public class DBHelper extends SQLiteOpenHelper {
 //        String [] whereArgs = new String[]{"20140702100019"};
 
         String[] column  = {Constants.DATABASE.CompanyCode, Constants.DATABASE.CompanyName};
-        Cursor cursor = db.query(true, Constants.DATABASE.Rpt_FA_Harian, column, null, null, null, null, null, null);
+        Cursor cursor = db.query(true, Constants.DATABASE.Rpt_FA_Harian, column, null,
+                null, null, null, null, null);
 
         try {
             while (cursor.moveToNext()) {
@@ -138,7 +189,8 @@ public class DBHelper extends SQLiteOpenHelper {
 //        String [] whereArgs = new String[]{"20140702100019"};
 
         String[] column  = {Constants.DATABASE.LocationCode, Constants.DATABASE.LocationDesc};
-        Cursor cursor = db.query(true, Constants.DATABASE.Rpt_FA_Harian, column, null, null, null, null, null, null);
+        Cursor cursor = db.query(true, Constants.DATABASE.Rpt_FA_Harian, column, null,
+                        null, null, null, null, null);
 
         try {
             while (cursor.moveToNext()) {
@@ -166,7 +218,8 @@ public class DBHelper extends SQLiteOpenHelper {
 //        String [] whereArgs = new String[]{"20140702100019"};
 
         String[] column  = {Constants.DATABASE.AfdelingCode, Constants.DATABASE.AfdelingDesc};
-        Cursor cursor = db.query(true, Constants.DATABASE.Rpt_FA_Harian, column, null, null, null, null, null, null);
+        Cursor cursor = db.query(true, Constants.DATABASE.Rpt_FA_Harian, column, null,
+                    null, null, null, null, null);
 
         try {
             while (cursor.moveToNext()) {
